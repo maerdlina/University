@@ -3,7 +3,7 @@ let x = Number(prompt('Введите x'))
 let y = Number(prompt('Введите y'))
 
 if (n % x == 0 && n % y == 0){
-    document.write(true)
+    document.write("Делится")
 } else{
-    document.write(false)
+    document.write("Не делится")
 }

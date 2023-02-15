@@ -1,21 +1,23 @@
 let ugadai = false;
 let zagadka = 5;
+
 while(ugadai != true){
-    let chislo = prompt('Введите число');
-    let t = (typeof(chislo));
-    if (t == 'string'){
+    let chislo = Number(prompt('Введите число'));
+    if (!isNaN(chislo)){
         if(chislo == zagadka){
-            document.write('Угадано');
+            alert('Угадано');
+            document.write('УГАДАНО');
             ugadai = true;
         } else {
             if(chislo > zagadka){
-                document.write('ваше число больше');
+                alert('ваше число больше');
             } else{
-                document.write('ваше число меньше');
+                alert('ваше число меньше');
             }
         }
     }
     else{
         let chislo = prompt('НЕ ЧИСЛО!!!Введите число');
+        if (!isNaN(chislo)) break;
     }
 }
